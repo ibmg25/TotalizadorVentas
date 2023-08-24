@@ -11,7 +11,7 @@ export class Ventas {
     return estado
   }
 
-  calcularImpuesto(estado) {
+  mostrarImpuesto(estado) {
     let impuesto = 0;
     if (estado=="CA")
     {
@@ -38,6 +38,10 @@ export class Ventas {
 
   calcularPrecioNeto(cantidad, precio){
     return cantidad*precio;
+  }
+
+  calcularImpuesto(neto, impuesto){
+    return neto*impuesto;
   }
 }
 
