@@ -1,5 +1,10 @@
-function calcular(cantidad) {
+function mostrarCantidad(cantidad) {
   return cantidad
 }
 
-export default calcular;
+function mostrarPrecio(precio) {
+  return precio
+}
+
+
+export {mostrarCantidad, mostrarPrecio};
