@@ -1,10 +1,11 @@
-function mostrarCantidad(cantidad) {
-  return cantidad
+export class Ventas {
+  mostrarCantidad(cantidad) {
+    return cantidad
+  }
+  
+  mostrarPrecio(precio) {
+    return precio
+  }
 }
 
-function mostrarPrecio(precio) {
-  return precio
-}
-
-
-export {mostrarCantidad, mostrarPrecio};
+export default Ventas;
