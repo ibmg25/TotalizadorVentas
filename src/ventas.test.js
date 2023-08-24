@@ -10,4 +10,9 @@ describe("Calcular", () => {
     let ventas = new Ventas();
     expect(ventas.mostrarPrecio(10)).toEqual(10);
   });
+
+  it("mostrar Estado", () => {
+    let ventas = new Ventas();
+    expect(ventas.mostrarEstado("TX")).toEqual("TX");
+  });
 });

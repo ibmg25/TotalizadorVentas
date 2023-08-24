@@ -6,6 +6,10 @@ export class Ventas {
   mostrarPrecio(precio) {
     return precio
   }
+
+  mostrarEstado(estado) {
+    return estado
+  }
 }
 
 export default Ventas;
