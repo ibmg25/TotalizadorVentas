@@ -22,4 +22,9 @@ describe("Calcular", () => {
 
   });
 
+  it("calcular precio neto", () => {
+    let ventas = new Ventas();
+    expect(ventas.calcularPrecioNeto(5, 25)).toEqual(125);
+
+  });
 });
