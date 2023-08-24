@@ -15,4 +15,11 @@ describe("Calcular", () => {
     let ventas = new Ventas();
     expect(ventas.mostrarEstado("TX")).toEqual("TX");
   });
+
+  it("calcular impuesto", () => {
+    let ventas = new Ventas();
+    expect(ventas.calcularImpuesto("TX")).toEqual(0.0625);
+
+  });
+
 });
