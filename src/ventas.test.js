@@ -36,4 +36,10 @@ describe("Calcular", () => {
     let neto = ventas.calcularPrecioNeto(20, 3);
     expect(ventas.calcularTotal(neto, ventas.calcularImpuesto(neto, ventas.mostrarImpuesto("TX")))).toEqual(63.75);
   });
+
+  it("mostrar precio final con descuento para total menor o igual a 1000(3%)", () => {
+    let ventas = new Ventas();
+    let neto = ventas.calcularPrecioNeto(10, 200);
+    expect(ventas.calcularFinal(neto, ventas.calcularImpuesto(neto, ventas.mostrarImpuesto("TX")))).toEqual(2061.25);
+  });
 });

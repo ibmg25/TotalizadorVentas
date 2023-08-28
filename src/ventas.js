@@ -37,6 +37,13 @@ export class Ventas {
   calcularTotal(neto, impuestoTotal) {
     return neto + impuestoTotal;
   }
+
+  calcularFinal(neto, impuestoTotal) {
+    let total = neto + impuestoTotal;
+    if (total >= 1000 && total <= 2999)
+      total = total - total*0.03;
+    return total;
+  }
 }
 
 export default Ventas;
