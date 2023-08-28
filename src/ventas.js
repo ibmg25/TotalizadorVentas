@@ -42,6 +42,8 @@ export class Ventas {
     let total = neto + impuestoTotal;
     if (total >= 1000 && total <= 2999)
       total = total - total*0.03;
+    if (total >= 3000 && total <= 6999)
+      total = total - total*0.05;
     return total;
   }
 }
