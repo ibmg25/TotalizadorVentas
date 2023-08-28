@@ -52,6 +52,23 @@ export class Ventas {
       total = total - total*0.15;
     return total;
   }
+
+  porcentajeDescuento(neto, impuestoTotal) {
+    let total = neto + impuestoTotal;
+    if (total < 1000)
+      return 0;
+    if (total >= 1000 && total <= 2999)
+      return 3;
+    if (total >= 3000 && total <= 6999)
+      return 5;
+    if (total >= 7000 && total <= 9999)
+      return 7;
+    if (total >= 10000 && total <= 29999)
+      return 10;
+    if (total >= 30000)
+      return 15;
+  }
+
 }
 
 export default Ventas;

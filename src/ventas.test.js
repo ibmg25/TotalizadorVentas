@@ -66,4 +66,11 @@ describe("Calcular", () => {
     let neto = ventas.calcularPrecioNeto(120, 400);
     expect(ventas.calcularFinal(neto, ventas.calcularImpuesto(neto, ventas.mostrarImpuesto("TX")))).toEqual(43350);
   });
+
+  it("mostrar porcentaje de descuento", () => {
+    let ventas = new Ventas();
+    let neto = ventas.calcularPrecioNeto(32, 40);
+    let impuesto = ventas.calcularImpuesto(neto, ventas.mostrarImpuesto("TX"));
+    expect(ventas.porcentajeDescuento(neto, impuesto)).toEqual(3);
+  });
 });
