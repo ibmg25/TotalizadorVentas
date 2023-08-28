@@ -46,6 +46,8 @@ export class Ventas {
       total = total - total*0.05;
     if (total >= 7000 && total <= 9999)
       total = total - total*0.07;
+    if (total >= 10000 && total <= 29999)
+      total = total - total*0.1;
     return total;
   }
 }
