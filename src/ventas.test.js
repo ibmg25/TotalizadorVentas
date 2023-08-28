@@ -19,18 +19,21 @@ describe("Calcular", () => {
   it("mostrar impuesto", () => {
     let ventas = new Ventas();
     expect(ventas.mostrarImpuesto("TX")).toEqual(0.0625);
-
   });
 
   it("calcular precio neto", () => {
     let ventas = new Ventas();
     expect(ventas.calcularPrecioNeto(5, 25)).toEqual(125);
-
   });
 
   it("calcular impuesto", () => {
     let ventas = new Ventas();
     expect(ventas.calcularImpuesto(ventas.calcularPrecioNeto(20, 3), ventas.mostrarImpuesto("TX"))).toEqual(3.75);
+  });
 
+  it("mostrar precio con impuesto", () => {
+    let ventas = new Ventas();
+    let neto = ventas.calcularPrecioNeto(20, 3);
+    expect(ventas.calcularTotal(neto, ventas.calcularImpuesto(neto, ventas.mostrarImpuesto("TX")))).toEqual(63.75);
   });
 });
